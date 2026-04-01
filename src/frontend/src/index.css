@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark café palette — OKLCH L C H */
+    --background: 0.09 0.003 250;
+    --foreground: 0.96 0.01 90;
+    --card: 0.14 0.006 240;
+    --card-foreground: 0.96 0.01 90;
+    --popover: 0.14 0.006 240;
+    --popover-foreground: 0.96 0.01 90;
+    --primary: 0.72 0.1 70;
+    --primary-foreground: 0.12 0.004 250;
+    --secondary: 0.22 0.008 240;
+    --secondary-foreground: 0.96 0.01 90;
+    --muted: 0.18 0.006 240;
+    --muted-foreground: 0.73 0.015 80;
+    --accent: 0.72 0.1 70;
+    --accent-foreground: 0.12 0.004 250;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.22 0.008 240;
+    --input: 0.22 0.008 240;
+    --ring: 0.72 0.1 70;
+    --gold: 0.72 0.1 70;
+    --chart-1: 0.72 0.1 70;
+    --chart-2: 0.6 0.118 184;
+    --chart-3: 0.398 0.07 227;
+    --chart-4: 0.828 0.189 84;
+    --chart-5: 0.769 0.188 70;
+    --sidebar: 0.12 0.004 250;
+    --sidebar-foreground: 0.96 0.01 90;
+    --sidebar-primary: 0.72 0.1 70;
+    --sidebar-primary-foreground: 0.12 0.004 250;
+    --sidebar-accent: 0.18 0.006 240;
+    --sidebar-accent-foreground: 0.96 0.01 90;
+    --sidebar-border: 0.22 0.008 240;
+    --sidebar-ring: 0.72 0.1 70;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+  .font-sans {
+    font-family: "Inter", sans-serif;
+  }
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+  .kana-card {
+    background-color: oklch(var(--card));
+    border: 1px solid oklch(var(--border));
+    border-radius: 0.75rem;
+  }
+}
